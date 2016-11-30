@@ -690,7 +690,7 @@ class Client extends GuzzleClient
             $args['id'] = $ids;
         }
 
-        return $this->getResult('getLeadDescribe');
+        return $this->getResult( 'getLeadDescribe', $args, is_array($ids), $returnRaw );
     }
 
     /**
