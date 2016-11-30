@@ -686,11 +686,21 @@ class Client extends GuzzleClient
 
     public function getLeadDescribe( $ids = null, $args = array(), $returnRaw = false )
     {
-        if ($ids) {
+        if ( $ids ) {
             $args['id'] = $ids;
         }
 
         return $this->getResult( 'getLeadDescribe', $args, is_array($ids), $returnRaw );
+    }
+
+    public function getTagList( $ids = null, $args = array(), $returnRaw = false )
+    {
+        if( $ids )
+        {
+            $args['id'] = $ids;
+        }
+
+        return $this->getResult( $ids = null, $args, is_array( $ids ), $returnRaw );
     }
 
     /**

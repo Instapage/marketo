@@ -253,6 +253,12 @@
             "uri": "/rest/v1/leads/describe.json",
             "parameters": {},
             "responseClass": "CSD\\Marketo\\Response\\GetLeadDescribe"
+        },
+        "getTagList": {
+            "httpMethod": "GET",
+            "uri": "/rest/asset/v1/tagTypes.json",
+            "parameters": {},
+            "responseClass": "CSD\\Marketo\\Response\\GetTagList"
         }
     }
 }
