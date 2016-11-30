@@ -684,6 +684,15 @@ class Client extends GuzzleClient
         return $this->getResult('approveEmailbyId', $args, false, $returnRaw);
     }
 
+    public function getLeadDescribe( $ids = null, $args = array(), $returnRaw = false )
+    {
+        if ($ids) {
+            $args['id'] = $ids;
+        }
+
+        return $this->getResult('getLeadDescribe');
+    }
+
     /**
      * Internal helper method to actually perform command.
      *

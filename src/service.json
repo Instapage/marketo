@@ -247,6 +247,12 @@
                 "id": {"location": "uri"}
                 },
             "responseClass": "CSD\\Marketo\\Response\\ApproveEmailResponse"
+        },
+        "getLeadDescribe": {
+            "httpMethod": "GET",
+            "uri": "/rest/v1/leads/describe.json",
+            "parameters": {},
+            "responseClass": "CSD\\Marketo\\Response\\GetLeadDescribe"
         }
     }
 }
