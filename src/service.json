@@ -259,6 +259,14 @@
             "uri": "/rest/asset/v1/tagTypes.json",
             "parameters": {},
             "responseClass": "CSD\\Marketo\\Response\\GetTagsList"
+        },
+        "getTagValues": {
+            "httpMethod": "GET",
+            "uri": "/rest/asset/v1/tagType/byName.json?name={tagName}",
+            "parameters": {
+                "tagName": {"location": "uri"}
+            },
+            "responseClass": "CSD\\Marketo\\Response\\GetTagValues"
         }
     }
 }

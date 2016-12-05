@@ -703,6 +703,13 @@ class Client extends GuzzleClient
         return $this->getResult( 'getTagsList' , $args, is_array( $ids ), $returnRaw );
     }
 
+    public function getTagValues( $tagName, $args = array(), $returnRaw = false )
+    {
+        $args['tagName'] = $tagName;
+
+        return $this->getResult('getTagValues', $args, false, $returnRaw);
+    }
+
     /**
      * Internal helper method to actually perform command.
      *
