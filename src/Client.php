@@ -710,12 +710,12 @@ class Client extends GuzzleClient
         return $this->getResult('getTagValues', $args, false, $returnRaw);
     }
 
-    public function getChannels()
+    public function getChannels( $ids = null, $args = array(), $returnRaw = false )
     {
         return $this->getResult('getChannels', $args, is_array(), $returnRaw );
     }
 
-    public function getProgramById( $id, $args = array(), $returnRaw = false )
+    public function getProgramById( $args = array(), $returnRaw = false )
     {
         $args['id'] = $id;
 
