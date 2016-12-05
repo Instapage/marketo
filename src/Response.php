@@ -80,8 +80,10 @@ class Response implements ResponseClassInterface
     public function getWarning()
     {
         if(isset($this->data['warnings']) && count($this->data['warnings'])) {
-            retrun $this->data['warnings'][0];
+            return $this->data['warnings'][0];
         }
+
+        return null;
     }
 
     /**
