@@ -13,33 +13,22 @@ namespace CSD\Marketo\Response;
 use CSD\Marketo\Response as Response;
 
 /**
- * Response for the getLead and getLeadByFilterType API method.
+ * Response for the getPagingToken API method.
  *
  * @author Roberto Espinoza <roberto.espinoza@tamago-db.com>
  */
-class GetLeadChanges extends Response
+class GetPagingTokenResponse extends Response
 {
     /**
-     * @return array|null contains an array of leads with changes and attributes
+     * The API doesn't return the nextPageToken enclosed in a result.
+     * We have to get it directly from the data returned
+     *
+     * @return string|null
      */
-    public function getLeads()
+    public function getNextPageToken()
     {
         if ($this->isSuccess()) {
-            $result = $this->getResult();
-            return $result;
-        }
-
-        return null;
-    }
-
-    /**
-     * @return bool|null true if there are more results.
-     *                   null if the field was not found.
-     */
-    public function hasMoreResults()
-    {
-        if ($this->isSuccess()) {
-            return $this->data['moreResult'];
+            return $this->data['nextPageToken'];
         }
 
         return null;
@@ -63,7 +52,7 @@ class GetLeadChanges extends Response
         // if it's not successful and there's no error from Marketo, create one
         return array(
             'code' => '',
-            'message' => 'Lead changes not found'
+            'message' => 'Cannot retrieve a next page token'
         );
     }
 }

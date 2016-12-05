@@ -197,7 +197,7 @@
             "parameters": {
                 "sinceDatetime": {"location": "query"}
             },
-            "responseClass": "CSD\\Marketo\\Response\\GetPagingToken"
+            "responseClass": "CSD\\Marketo\\Response\\GetPagingTokenResponse"
         },
         "getLeadChanges": {
             "httpMethod": "GET",
@@ -209,7 +209,7 @@
                 "listId": {"location": "query"},
                 "fields": {"location": "query"}
             },
-            "responseClass": "CSD\\Marketo\\Response\\GetLeadChanges"
+            "responseClass": "CSD\\Marketo\\Response\\GetLeadChangesResponse"
         },
         "getLeadPartitions": {
             "httpMethod": "GET",
@@ -252,13 +252,13 @@
             "httpMethod": "GET",
             "uri": "/rest/v1/leads/describe.json",
             "parameters": {},
-            "responseClass": "CSD\\Marketo\\Response\\GetLeadDescribe"
+            "responseClass": "CSD\\Marketo\\Response\\GetLeadDescribeResponse"
         },
         "getTagsList": {
             "httpMethod": "GET",
             "uri": "/rest/asset/v1/tagTypes.json",
             "parameters": {},
-            "responseClass": "CSD\\Marketo\\Response\\GetTagsList"
+            "responseClass": "CSD\\Marketo\\Response\\GetTagsListResponse"
         },
         "getTagValues": {
             "httpMethod": "GET",
@@ -266,7 +266,21 @@
             "parameters": {
                 "tagName": {"location": "uri"}
             },
-            "responseClass": "CSD\\Marketo\\Response\\GetTagValues"
+            "responseClass": "CSD\\Marketo\\Response\\GetTagValuesResponse"
+        },
+        "getChannels": {
+            "httpMethod": "GET",
+            "uri": "/rest/asset/v1/channels.json",
+            "parameters": {},
+            "responseClass": "CSD\\Marketo\\Response\\GetChannelsResponse"
+        },
+        "getProgramById": {
+            "httpMethod": "GET",
+            "uri": "/rest/asset/v1/program/{id}.json",
+            "parameters": {
+                "id": {"location": "uri"}
+            },
+            "responseClass": "CSD\\Marketo\\Response\\GetProgramByIdResponse"
         }
     }
 }

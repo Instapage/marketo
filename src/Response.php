@@ -77,6 +77,13 @@ class Response implements ResponseClassInterface
         return null;
     }
 
+    public function getWarning()
+    {
+        if(isset($this->data['warnings']) && count($this->data['warnings'])) {
+            retrun $this->data['warnings'][0];
+        }
+    }
+
     /**
      * {@inheritdoc}
      */
