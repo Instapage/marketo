@@ -283,7 +283,7 @@
             "responseClass": "CSD\\Marketo\\Response\\GetProgramByIdResponse"
         },
         "getPrograms": {
-            "gttpMethod": "GET",
+            "httpMethod": "GET",
             "uri": "/rest/asset/v1/programs.json",
             "parameters": {},
             "responseClass": "CSD\\Marketo\\Response\\GetProgramsResponse"
