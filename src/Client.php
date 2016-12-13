@@ -719,7 +719,7 @@ class Client extends GuzzleClient
     {
         $args['id'] = $id;
 
-        return $this->getProgramById('getProgramById', $args, false, $returnRaw );
+        return $this->getResult('getProgramById', $args, false, $returnRaw );
     }
 
     /**
