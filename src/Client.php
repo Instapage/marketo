@@ -722,6 +722,11 @@ class Client extends GuzzleClient
         return $this->getResult('getProgramById', $args, false, $returnRaw );
     }
 
+    public function getPrograms( $args = array(), $returnRaw = false )
+    {
+        return $this->getResult('getPrograms', $args, false, $returnRaw );
+    }
+
     /**
      * Internal helper method to actually perform command.
      *
